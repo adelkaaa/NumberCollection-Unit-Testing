@@ -7,15 +7,23 @@ namespace NumberCollection
         static void Main(string[] args)
         {
             int[] numbers = { 1, 2, 3, 4, 5 };
-            NumberColl numberCollection = new NumberColl(numbers);
 
-            double average = numberCollection.GetAverage();
-            int sum = numberCollection.GetSum();
-            int max = numberCollection.GetMax();
-            int min = numberCollection.GetMin();
-            bool containsThree = numberCollection.Contains(3);
-            bool containsTen = numberCollection.Contains(10);
-            int count = numberCollection.Count();
+            AverageCalculator averageCalculator = new AverageCalculator(numbers);
+            double average = averageCalculator.CalculateAverage();
+
+            SumCalculator sumCalculator = new SumCalculator(numbers);
+            int sum = sumCalculator.CalculateSum();
+
+            MaxCalculator maxCalculator = new MaxCalculator(numbers);
+            int max = maxCalculator.FindMax();
+
+            MinCalculator minCalculator = new MinCalculator(numbers);
+            int min = minCalculator.FindMin();
+
+            NumberColl numberColl = new NumberColl(numbers);
+            bool containsThree = numberColl.Contains(3);
+            bool containsTen = numberColl.Contaions(10);
+            int count = numberColl.Count();
 
             for (int i = 0; i < count; i++) Console.Write(numbers[i] + " ");
 
