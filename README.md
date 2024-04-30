@@ -31,9 +31,9 @@ classDiagram
         + Count(): int
     }
 
-    AverageCalculator --> "1" numbers
-    SumCalculator --> "1" numbers
-    MaxCalculator --> "1" numbers
-    MinCalculator --> "1" numbers
-    NumberColl --> "1" numbers
+    AverageCalculator "1" --> "*" numbers : has
+    SumCalculator "1" --> "*" numbers : has
+    MaxCalculator "1" --> "*" numbers : has
+    MinCalculator "1" --> "*" numbers : has
+    NumberColl "1" --> "*" numbers : has
 ```
