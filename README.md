@@ -1,1 +1,39 @@
-В проекте есть небольшая неполадка. Если возникнут ошибки, то нужно поля с ошибками просто удалить, тогда проект запустится. Не знаю с чем это связано, изучаю этот вопрос :с по моим предположениям, дело в Visual Studio... или дело в 11 винде... или дело во мне
+```mermaid
+classDiagram
+    class AverageCalculator {
+        - numbers: int[]
+        + AverageCalculator(numbers: int[])
+        + CalculateAverage(): double
+    }
+
+    class SumCalculator {
+        - numbers: int[]
+        + SumCalculator(numbers: int[])
+        + CalculateSum(): int
+    }
+
+    class MaxCalculator {
+        - numbers: int[]
+        + MaxCalculator(numbers: int[])
+        + FindMax(): int
+    }
+
+    class MinCalculator {
+        - numbers: int[]
+        + MinCalculator(numbers: int[])
+        + FindMin(): int
+    }
+
+    class NumberColl {
+        - numbers: int[]
+        + NumberColl(numbers: int[])
+        + Contains(number: int): bool
+        + Count(): int
+    }
+
+    AverageCalculator --> numbers
+    SumCalculator --> numbers
+    MaxCalculator --> numbers
+    MinCalculator --> numbers
+    NumberColl --> numbers
+```
